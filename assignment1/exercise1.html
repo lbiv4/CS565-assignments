@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise 1 - Student Information Form</title>
+  </head>
+  <body>
+    <form class="htmlForm">
+      <h1>HTML Form</h1>
+      <div>First name: <input id="firstName" type="text" /></div>
+      <br />
+      <div>Last name: <input id="lastName" type="text" /></div>
+      <br />
+      <div>Email: <input id="email" type="text" /></div>
+      <br />
+      <div>
+        <input
+          type="radio"
+          id="radio1"
+          name="studentLevel"
+          value="Undergraduate Student"
+        />
+        <!--Label information found here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Defining_a_radio_group-->
+        <label for="radio1">Undergraduate Student</label>
+        <br />
+        <input
+          type="radio"
+          id="radio2"
+          name="studentLevel"
+          value="Graduate Student"
+        />
+        <label for="radio2">Graduate Student</label>
+      </div>
+      <br />
+      <div>
+        <button type="submit">Submit</button>
+        <button type="submit">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>
