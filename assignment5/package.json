@@ -1,0 +1,22 @@
+{
+  "name": "cs565-assignments-5",
+  "version": "5.0.0",
+  "description": "Work for assignment 5 of CS565",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbiv4/CS565-assignments.git"
+  },
+  "author": "Lane Barton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lbiv4/CS565-assignments/issues"
+  },
+  "homepage": "https://github.com/lbiv4/CS565-assignments#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
