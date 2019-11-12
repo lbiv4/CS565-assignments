@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        //Set upon load
+        document.getElementById(
+          "height"
+        ).innerHTML = `Height: ${window.innerHeight}px`;
+        document.getElementById(
+          "width"
+        ).innerHTML = `Width: ${window.innerWidth}px`;
+        //Reset when window reloads
+        window.addEventListener("resize", event => {
+          document.getElementById(
+            "height"
+          ).innerHTML = `Height: ${window.innerHeight}px`;
+          document.getElementById(
+            "width"
+          ).innerHTML = `Width: ${window.innerWidth}px`;
+        });
+      });
+    </script>
+    <title>Exercise 4 - Resize</title>
+  </head>
+  <body>
+    <div id="height"></div>
+    <div id="width"></div>
+  </body>
+</html>
