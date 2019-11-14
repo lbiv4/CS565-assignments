@@ -1,15 +1,28 @@
 const express = require("express");
+const bp = require("body-parser");
 const server = express();
 
-server.get("/", (req, res) => {
+server.use(
+  bp.urlencoded({
+    extended: true
+  })
+);
+server.get("*", (req, res) => {
   res.status(200);
-  res.set({ "Content-Type": "text/plain" });
-  res.sendFile(path.join("/index.html"));
+  //This is expecting you to be in the assignment5 folder - otherwise it will throw an error
+  res.sendFile("index.html", { root: __dirname });
 });
 server.post("/submit", (req, res) => {
-  console.log(req);
+  let output = "";
+  Object.keys(req.body).forEach(key => {
+    output += `${key}: ${req.body[key]}\n`;
+  });
   res.status(200);
   res.set({ "Content-Type": "text/plain" });
-  res.send("test: ");
+  res.send(output);
 });
 server.listen(8000);
+console.log(
+  `This is your directory from which files will be served: ${__dirname}`
+);
+console.log(`Consider moving to assignment5 if necessary`);
