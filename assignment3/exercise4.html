@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      #gridContainer {
+        width: 1000px;
+      }
+
+      .item {
+        background-color: #444444;
+        color: white;
+        font-family: "Times New Roman";
+        font-size: 24px;
+        border-radius: 0.3rem;
+        margin: 5px;
+        padding: 20px;
+        height: 100px;
+      }
+
+      .odd {
+        width: 300px;
+      }
+
+      .even {
+        width: 600px;
+        position: absolute;
+        left: 310px;
+      }
+
+      .row1 {
+        position: absolute;
+        top: 0px;
+      }
+
+      .row2 {
+        position: absolute;
+        top: 110px;
+      }
+
+      .row3 {
+        position: absolute;
+        top: 220px;
+      }
+
+      .row4 {
+        width: 910px;
+        position: absolute;
+        top: 330px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="gridContainer">
+      <div class="item odd row1">One</div>
+      <div class="item even row1">Two</div>
+      <div class="item odd row2">Three</div>
+      <div class="item even row2">Four</div>
+      <div class="item odd row3">Five</div>
+      <div class="item even row3">Six</div>
+      <div class="item odd row4">Seven</div>
+    </div>
+  </body>
+</html>

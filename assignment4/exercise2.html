@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      const reverseNumber = num => {
+        if(typeof num !== "number") {
+          console.log("Please pass a number to this method")
+        } else {
+          return parseInt(num.toString().split("").reverse().join(""));
+        }
+      };
+      let i = 231756;
+      console.log(`Demo: ${i} -> ${reverseNumber(i)}`)
+    </script>
+    <title>Exercise 2 - Reverse</title>
+  </head>
+  <body>
+    Check console for exercise work. Run "reverseNumber(<someNumber>)" in console to test
+  </body>
+</html>

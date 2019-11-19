@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("random").addEventListener("click", event => {
+          const rand = Math.floor(Math.random() * Math.pow(16, 6));
+          document.getElementById(
+            "body"
+          ).style = `background-color: #${rand.toString(16)}`;
+        });
+      });
+    </script>
+    <title>Exercise 5 - Color Change</title>
+  </head>
+  <body id="body">
+    <button id="random" type="button" class="btn btn-primary btn-lg">
+      CHANGE BACKGROUND BUTTON
+    </button>
+  </body>
+</html>
