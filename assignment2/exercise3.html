@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        height: 1000px;
+        display: block;
+        font-size: 18px;
+      }
+
+      h1,
+      h4 {
+        text-align: center;
+        padding: 10px;
+        background-color: #0f411c;
+        color: #bc9810;
+      }
+
+      h2,
+      h3 {
+        width: fit-content;
+        display: inline-block;
+        padding: 10px;
+        background-color: #0f411c;
+        color: #bc9810;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        grid-template-rows: 1000px;
+      }
+
+      #images {
+        float: right;
+        width: 1000px;
+      }
+
+      #contactForm {
+        text-align: left;
+        width: 50%;
+        padding: 25px;
+        border: 1px solid rgb(209, 207, 207);
+        border-radius: 0.3rem;
+      }
+
+      #contactSubmit {
+        background-color: #0f411c;
+        color: #bc9810;
+      }
+
+      #contactSubmit:hover {
+        color: white;
+      }
+    </style>
+    <title>Exercise 3 - Lane's Portfolio</title>
+  </head>
+  <body>
+    <header><h1>Lane Barton's Portfolio</h1></header>
+    <div id="container">
+      <div id="content">
+        <section>
+          <h2>Bio</h2>
+          <image
+            id="headshot"
+            src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-1/p74x74/13770491_869826466456036_3145743191389817665_n.jpg?_nc_cat=106&_nc_oc=AQk4CWDlVjjIl_gun7Ago25aFm9-roVu_Z0RL7vgwgg9Oabf_R0cFpSSx4INac--bw0&_nc_ht=scontent-sea1-1.xx&oh=adfc9f951968c5734ea585125e087384&oe=5E3E5142"
+            alt="Lane Barton headshot"
+            style="position:relative;top:20px;left:50px;"
+          ></image>
+          <p>
+            Hello all - I'm Lane Barton, a 26 year old programmer from Portland,
+            Oregon currently enrolled in the computer science graduate program
+            at Portland State university.
+          </p>
+          <p>
+            My programming experience includes knowledge of:
+          </p>
+          <ul>
+            <li>Node</li>
+            <li>Java</li>
+            <li>C++, C#</li>
+            <li>Python</li>
+            <li>Scala</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Interests</h2>
+          <p>
+            I am an avid sports fan who loves Oregon sports:
+          </p>
+        </section>
+        <section>
+          <h3>Contact Me</h3>
+          <form id="contactForm">
+            <div>Name: <input id="name" type="text" /></div>
+            <br />
+            <div>Email: <input id="email" type="text" /></div>
+            <br />
+            <div>
+              <button id="contactSubmit" type="submit">Submit</button>
+            </div>
+          </form>
+          <br />
+        </section>
+      </div>
+      <div id="images">
+        <image
+          id="autzen"
+          src="https://1.bp.blogspot.com/-16zoN2mTxso/XbnKDu6zrWI/AAAAAAAAAKk/xk9OhP6JQvQ3CDJqYOhyXLbCVcnI8PbeACLcBGAsYHQ/s1600/IMG_0674.JPG"
+          alt="Autzen Stadium"
+          style="height:49%"
+        ></image>
+        <image
+          id="rosegarden"
+          src="https://1.bp.blogspot.com/-cEpsosODBTY/XbnKHGtT5VI/AAAAAAAAAK4/L1Vx6-I4HO40JLdJGS7S27AyAuOYLOUugCLcBGAsYHQ/s1600/IMG_0847.JPG"
+          alt="Rose Garden during 2019 playoffs"
+          style="height:49%"
+        ></image>
+      </div>
+    </div>
+    <footer><h4>Lane Barton's Portfolio</h4></footer>
+  </body>
+</html>
