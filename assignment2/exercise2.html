@@ -5,33 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <style type="text/css">
-      .verticalContainer {
-        width: 430px;
-        display: inline-block;
+      body {
+        width: 850px;
+        margin: 40px auto;
+        display: block;
+      }
+
+      h1 {
+        margin: 0 0 40px 0;
+        color: lightgray;
+        font: normal normal 5em Baskerville, Palatino, "Book Antiqua", serif;
+      }
+
+      #coloredSection {
+        background: #444444;
+        color: white;
+        font-weight: bold;
         padding: 10px;
       }
 
-      .imageBlock {
-        margin: 5px;
+      #mainContainer {
+        width: 400px;
+        padding-right: 8px;
+        height: 582px;
+        float: left;
+        position: relative;
+        display: block;
+      }
+
+      #imageContainer {
+        width: 410px;
+        float: right;
+        margin-left: 8px;
+        margin-bottom: 8px;
+      }
+
+      #img1,
+      #img2,
+      #img3 {
         float: left;
       }
 
-      #imageBlock3 {
+      #img1 {
+        margin-right: 10px;
+      }
+
+      #img4,
+      #img5,
+      #img6,
+      #img7 {
         float: right;
       }
 
+      #img4 {
+        margin-left: 10px;
+      }
+
+      #img5 {
+        margin-left: 8px;
+      }
+
       img {
-        vertical-align: bottom;
-        margin-bottom: 5px;
-        margin-right: 8px;
+        margin-bottom: 8px;
+      }
+
+      footer {
+        position: absolute;
+        top: 625px;
+        border-top: 1px solid #d6d6d6;
+      }
+
+      a {
+        color: limegreen;
       }
     </style>
     <title>Exercise 2 - Replicating HTML for placekitten.com</title>
   </head>
   <body>
     <div id="bodyContainer">
-      <h1>placekitten</h1>
       <div id="mainContainer" class="verticalContainer">
+        <h1>placekitten</h1>
         <p>
           <strong
             >A quick and simple service for getting pictures of kittens for use
@@ -40,7 +93,7 @@
           Just put your image size (width & height) after our URL and you'll get
           a placeholder.
         </p>
-        <p>
+        <p id="coloredSection">
           Like this:
           <a href="http://placekitten.com/200/300"
             >http://placekitten.com/200/300</a
@@ -57,15 +110,15 @@
       </div>
       <div id="imageContainer" class="verticalContainer">
         <div id="imageBlock2" class="imageBlock">
-          <img src="http://placekitten.com/200/287" />
-          <img src="http://placekitten.com/200/140" />
-          <img src="http://placekitten.com/200/139" />
+          <img id="img1" src="http://placekitten.com/200/287" />
+          <img id="img2" src="http://placekitten.com/200/140" />
+          <img id="img3" src="http://placekitten.com/200/139" />
         </div>
         <div id="imageBlock3" class="imageBlock">
-          <img src="http://placekitten.com/200/286" />
-          <img src="http://placekitten.com/96/140" />
-          <img src="http://placekitten.com/96/139" />
-          <img src="http://placekitten.com/200/138" />
+          <img id="img4" src="http://placekitten.com/200/286" />
+          <img id="img5" src="http://placekitten.com/96/140" />
+          <img id="img6" src="http://placekitten.com/96/139" />
+          <img id="img7" src="http://placekitten.com/200/138" />
         </div>
       </div>
     </div>
