@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style type="text/css">
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      #contactDiv {
+        background-color: white;
+        margin: auto;
+        padding: 25px;
+        width: 400px;
+        height: 500px;
+      }
+    </style>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        //Submit/print
+        document.getElementById("submit").addEventListener("click", event => {
+          const elementsToCheck = document.querySelectorAll(
+            "div.form-group > input, div.form-group > textarea"
+          );
+          console.log(`Submit at ${new Date().toTimeString()}`);
+          elementsToCheck.forEach(elem => {
+            elem.value = elem.value;
+            console.log(`${elem.id}: ${elem.value}`);
+          });
+        });
+        //Reset
+        document.getElementById("reset").addEventListener("click", event => {
+          const elementsToCheck = document.querySelectorAll(
+            "div.form-group > input, div.form-group > textarea"
+          );
+          elementsToCheck.forEach(elem => {
+            elem.value = "";
+          });
+        });
+      });
+    </script>
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <div id="contactDiv" class="border rounded">
+      <form action="/submit" method="post">
+        <h4 style="text-align: center;">CONTACT US</h4>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="message">Comment</label>
+          <textarea
+            id="message"
+            name="message"
+            class="form-control"
+            rows="5"
+          ></textarea>
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">
+          Submit
+        </button>
+        <button id="reset" type="button" class="btn btn-secondary">
+          Reset
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
